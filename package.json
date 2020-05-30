@@ -1,0 +1,17 @@
+{
+  "name": "websocket-chat",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:SzymonJak/websocket-chat.git",
+  "author": "Szymon Jakubiak <jakubiak.sz@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
