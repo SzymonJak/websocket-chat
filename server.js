@@ -41,7 +41,9 @@ io.on('connection', (socket) => {
         const removeUser = users.findIndex(user => {
             return user.id == socket.id;
         });
-        socket.broadcast.emit('userLeft', { author: 'Chat Bot', content: `${users[removeUser].name} has left conversation... ;(`});
+        if (users[removeUser]) {
+            socket.broadcast.emit('userLeft', { author: 'Chat Bot', content: `${users[removeUser].name} has left conversation... ;(`});
+        }
         users.splice(removeUser, 1);
         console.log(users);
     });
